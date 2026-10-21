@@ -1,0 +1,36 @@
+// Approach 3X (sum of 2 numbers)
+
+import java.util.Scanner;
+
+class program38 {
+    public static void main(String A[]) {
+
+        Scanner scanner = null;
+        int iValue1 = 0 , iValue2 = 0 , iResult = 0 ;
+
+        scanner = new Scanner(System.in);
+
+        System.out.println("enter first number : ");
+        iValue1 = scanner.nextInt();
+
+        System.out.println("enter second number : ");
+        iValue2 = scanner.nextInt();
+ 
+        iResult = Arithmatic.addition(iValue1, iValue2);
+        
+        System.out.println("addition is : "+iResult);
+
+    }
+}
+
+class Arithmatic
+{
+    public static int addition(int iNo1 , int iNo2)
+    {
+        int iAns = 0;
+
+        iAns = iNo1 + iNo2;
+
+        return iAns;
+    }
+}
