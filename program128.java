@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 class Digit
 {
-    public int CountDigits(int iNo)
+    public int SumDigits(int iNo)
     {
         int iDigit = 0;
-        int iCount = 0;
+        int iSum = 0;
 
         if(iNo < 0)
         {
@@ -16,10 +16,11 @@ class Digit
         while(iNo != 0)
         {
             iDigit = iNo % 10;
-            iNo = iNo/10;    
-            iCount++;
+            iNo = iNo/10;  
+            iSum = iSum + iDigit; 
+            
         }   
-        return iCount;
+        return iSum;
     }
     
 }
@@ -36,9 +37,9 @@ class program128
         System.out.println("enter number : ");
         int iValue = scanner.nextInt();
 
-        iRet = digit.CountDigits(iValue);
+        iRet = digit.SumDigits(iValue);
 
-        System.out.println("num of digits : " + iRet);
+        System.out.println("summation of digits : " + iRet);
     }
 }
 
